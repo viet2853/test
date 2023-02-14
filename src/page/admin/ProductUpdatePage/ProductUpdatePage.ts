@@ -1,4 +1,3 @@
-import { Match } from "navigo";
 import { getProduct, updateProduct } from "../../../api/product.api";
 import { router, useEffect, useState } from "../../../lib";
 import { ProductType } from "../../../types/Product.type";

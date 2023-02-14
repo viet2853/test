@@ -100,7 +100,7 @@ const useEffect = (cb: any, deps?: any) => {
 };
 
 router.on("/*", () => {}, {
-  before(done, match) {
+  before(done, match?: any) {
     states = [];
     currentStateOrder = 0;
     effects = [];
