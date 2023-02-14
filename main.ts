@@ -9,7 +9,7 @@ import HomePage from "./src/page/HomePage";
 import ProductDetailPage from "./src/page/ProductDetailPage";
 import PostDetailPage from "./src/page/PostDetailPage";
 import { Match } from "navigo";
-
+import NotFound from "./src/page/NotFound";
 const app = document.querySelector("#app");
 if (app) {
   //Admin
@@ -33,5 +33,7 @@ if (app) {
   router.on("/posts/:id", (data) =>
     render(() => MainLayout(() => PostDetailPage((data as Match).data)), app)
   );
+
+  router.notFound(() => NotFound);
   router.resolve();
 }
