@@ -1,4 +1,7 @@
+import myCV from "./CV_NguyenTrongViet.pdf";
+
 export default function About() {
+  console.log(myCV);
   return `<div class="flex flex-col items-center md:flex-row md:justify-between md:gap-x-24"> 
         <div>
             <h1 class="text-3xl font-bold">
@@ -47,7 +50,7 @@ export default function About() {
             /></a>
             </div>
             <div class="mt-5">
-               <a href="../../assets/CV_NguyenTrongViet.pdf" download="VietCV">
+               <a href="${myCV}" download>
                 <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Dowload My CV</button>
                 </a>
             </div>
