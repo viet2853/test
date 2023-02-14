@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Shopee Clone",
+      "image": "https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/project-web-design.png",
+      "author": "Vietnt2",
+      "description": "This is a project to clone the user page of the e-commerce platform Shopee",
+      "feature": "Authenticated with JWT. Use the Yup and React Hook Form to validate the form,Smart Pagination, Filter, and Product Search. Incorporate state into the URL to easily share results across devices. Asynchronous state management with React Query. Multiple languages with react-i18next. Code Splitting Improve performance by optimizing build file size analysis. SEO with React Helmet. Separate the private and public routes. Unit Test Manage components with Storybook",
+      "technologies": "REST API, ReactJs, Typescript, Tailwindcss, React Router, React Hook Form, Yup, React Query, Vite, Vitest, Storybook, ESLint, Prettier, React Helmet",
+      "live": "https://magical-strudel-d918db.netlify.app/",
+      "source": "https://github.com/viet2853/shopee-clone/tree/master"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "subTitle": "Redux Toolkit thực sự là một best practices để xử lý dữ liệu trong ứng dụng Redux. Trên trang chủ của Redux cũng đã khuyến khích sử dụng Redux Toolkit khi làm việc với ứng dụng React:",
+      "image": "https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/image-post.jpeg",
+      "title": "Tích hợp Redux Toolkit vào React với Typescript",
+      "content": "Redux là một thư việc Javascript dùng để quản lý trạng thái (state) trong các ứng dụng web. Nó được phát triển dựa trên mô hình luồng dữ liệu cố định (Flux architecture) và được sử dụng rộng rãi trong các ứng dụng sử dụng React, nhưng cũng có thể được sử dụng với các thư viện khác. Tuy nhiên, Redux có thể khó cấu hình cho các dự án lớn và cần nhiều công sức để tạo ra các action, reducer và middleware cho dự án và nó cũng gây khó khăn cho những người mới học và sử dụng nó. Redux Toolkit sinh ra để chúng ta có thể sử dụng Redux hiệu quả và cấu hình dễ dàng hơn.",
+      "createdAt": "Feb 6, 2020",
+      "author": "Vietnt"
+    },
+    {
+      "id": 2,
+      "subTitle": "Redux Toolkit thực sự là một best practices để xử lý dữ liệu trong ứng dụng Redux. Trên trang chủ của Redux cũng đã khuyến khích sử dụng Redux Toolkit khi làm việc với ứng dụng React:",
+      "image": "https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/image-post.jpeg",
+      "title": "Async API Fetching với Redux Toolkit",
+      "content": "Khi làm việc với API, chúng ta sẽ cần phải chờ đến khi API thực hiện xong, mới tiếp tục thao tác gì đó. Việc như thế này được gọi là asynchronous, với Redux chỉ có synchronous thôi. Vậy để thực hiện được synchronous, chúng ta cần một middleware như Redux-Thunk hoặc Saga. Với Redux Toolkit, Redux-Thunk là đã tích hợp sẵn rồi.",
+      "createdAt": "Feb 6, 2020",
+      "author": "Vietnt"
+    },
+    {
+      "id": 3,
+      "subTitle": "Redux Toolkit thực sự là một best practices để xử lý dữ liệu trong ứng dụng Redux. Trên trang chủ của Redux cũng đã khuyến khích sử dụng Redux Toolkit khi làm việc với ứng dụng React:",
+      "image": "https://creativedesignsguru.com/demo/astro-boilerplate/assets/images/image-post.jpeg",
+      "title": "Redux toolkit - Refactor lại redux structure",
+      "content": "Bài viết này mình viết với mục đích giới thiệu một concept thiết kế khác cho phần redux trong các ứng dụng được xây dựng bằng reactjs. Với kiến trúc thiết kế cấu trúc cũ, Redux cũng đã phần nào cải thiện rõ rệt việc cấu trúc các file. Tuy nhiên đối với mình, mình vẫn thấy chúng có một số nhược điểm như:",
+      "createdAt": "Feb 6, 2020",
+      "author": "Vietnt"
+    }
+  ]
+}
