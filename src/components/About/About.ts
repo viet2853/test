@@ -1,7 +1,6 @@
-import myCV from "./CV_NguyenTrongViet.pdf";
+import myCV from "../../../public/assets/CV_NguyenTrongViet.pdf";
 
 export default function About() {
-  console.log(myCV);
   return `<div class="flex flex-col items-center md:flex-row md:justify-between md:gap-x-24"> 
         <div>
             <h1 class="text-3xl font-bold">
