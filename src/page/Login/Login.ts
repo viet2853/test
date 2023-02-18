@@ -1,4 +1,3 @@
-import { AxiosError } from "axios";
 import { login } from "../../api/auth.api";
 import { router, useEffect, useState } from "../../lib";
 import { isAxiosError, setUserToLS } from "../../utils/util";

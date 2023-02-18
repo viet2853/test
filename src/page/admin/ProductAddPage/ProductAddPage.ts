@@ -1,6 +1,5 @@
 import { addProduct } from "../../../api/product.api";
 import { router, useEffect } from "../../../lib";
-import { uploadFile } from "../../../api/uploadFlie.api";
 import { handleUploadFile } from "../../../utils/util";
 
 export default function ProductAddAdminPage() {
