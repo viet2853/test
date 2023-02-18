@@ -5,13 +5,13 @@ interface Props {
 }
 
 export default function Product({ product }: Props) {
-  const { id, name, image, feature, technologies } = product;
+  const { id, name, images, feature, technologies } = product;
   return `<div class="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row">
   <div class="shrink-0">
     <a href="/products/${id}">
       <img
           class="h-36 w-36 hover:translate-y-1"
-          src="${image}"
+          src="${images?.[0]}"
           alt="Project Web Design"
           loading="lazy"
       />

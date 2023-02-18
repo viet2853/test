@@ -1,4 +1,19 @@
+import { useEffect, useState } from "../../lib";
+import { User } from "../../types/User.type";
+import { clearLS, getUserFromLS } from "../../utils/util";
+
 export default function Header() {
+  const [user, setUser] = useState<User>(getUserFromLS());
+
+  useEffect(() => {
+    const btnLogout = document.querySelector(".btn-logout");
+    if (btnLogout) {
+      btnLogout.addEventListener("click", () => {
+        clearLS();
+        setUser(null);
+      });
+    }
+  });
   return `<div class=" px-3 py-6">
   <div
     class="flex flex-col gap-y-3 sm:flex-row sm:items-center sm:justify-between"
@@ -25,17 +40,30 @@ export default function Header() {
       </div></a
     >
     <nav>
-      <ul class="flex gap-x-3 font-medium text-gray-200">
+      ${
+        user
+          ? `<div class="flex items-center">
+              <div>${user.email}</div>
+              ${
+                user.role === "admin"
+                  ? `<a  href="admin/products"  class="text-white font-medium rounded-lg text-sm ml-2 hover:text-blue-700">Admin</a>`
+                  : ""
+              }
+              <button type="button" class="text-white btn-logout font-medium rounded-lg text-sm ml-2 hover:text-blue-700 ">Đăng xuất</button>
+            </div>`
+          : `<ul class="flex items-center gap-x-3 font-medium text-gray-200">
         <li class="hover:text-white">
-          <a href="/admin/products">Admin</a>
+          <a href="/signup">
+          <button type="button" class="text-white border border-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Sign Up</button>
+          </a>
         </li>
         <li class="hover:text-white">
-          <a href="/">GitHub</a>
-        </li>
-        <li class="hover:text-white">
-          <a href="/">Twitter</a>
-        </li>
-      </ul>
+        <a href="/login">
+        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Log In</button>
+        </a>
+      </li>
+      </ul>`
+      } 
     </nav>
   </div>
 </div>

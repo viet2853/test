@@ -1,7 +1,7 @@
 export interface ProductType {
   id: string;
   author: string;
-  image?: string;
+  images?: string[];
   name: string;
   description: string;
   live: string;

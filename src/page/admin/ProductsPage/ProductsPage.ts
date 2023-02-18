@@ -29,7 +29,7 @@ export default function ProductsAdminPage() {
     });
   });
 
-  if (products.length === 0) return null;
+  // if (products.length === 0) return null;
   return `<div class="text-white">
     <a href="/admin/products/add"><button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">Add+</button><a >
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -53,10 +53,12 @@ export default function ProductsAdminPage() {
             </tr>
         </thead>
         <tbody>
-            ${products
-              .map(
-                (product) =>
-                  `<tr class="border-b ">
+            ${
+              products.length > 0
+                ? products
+                    .map(
+                      (product) =>
+                        `<tr class="border-b ">
                     <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap dark:text-white">
                         ${product.name}
                     </th>
@@ -77,8 +79,10 @@ export default function ProductsAdminPage() {
                         <button data-id="${product.id}" type="button" class="btn-remove focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Delete</button>
                     </th>
                 </tr>`
-              )
-              .join("")}
+                    )
+                    .join("")
+                : ""
+            }
         </tbody>
     </table>
     </div>

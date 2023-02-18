@@ -10,6 +10,9 @@ import ProductDetailPage from "./src/page/ProductDetailPage";
 import PostDetailPage from "./src/page/PostDetailPage";
 import { Match } from "navigo";
 import NotFound from "./src/page/NotFound";
+import SignUp from "./src/page/SignUp";
+import Login from "./src/page/Login";
+
 const app = document.querySelector("#app");
 if (app) {
   //Admin
@@ -25,6 +28,7 @@ if (app) {
       app
     )
   );
+
   //Client
   router.on("/", () => render(() => MainLayout(HomePage), app));
   router.on("/products/:id", (data) =>
@@ -33,6 +37,8 @@ if (app) {
   router.on("/posts/:id", (data) =>
     render(() => MainLayout(() => PostDetailPage((data as Match).data)), app)
   );
+  router.on("/signup", () => render(SignUp, app));
+  router.on("/login", () => render(Login, app));
 
   router.notFound(() => NotFound);
   router.resolve();

@@ -6,8 +6,8 @@ interface Props {
 }
 
 export default function AdminLayout(children: Props) {
-  return `<div class="container px-10  text-gray-100">
-  <div class="mx-auto max-w-7xl">
+  return `<div class=" min-h-screen w-full bg-slate-900 px-10 text-gray-100">
+  <div class="mx-auto container max-w-7xl">
     ${Header()}
       ${children()}
     ${Footer()}
