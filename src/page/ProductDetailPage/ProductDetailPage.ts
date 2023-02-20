@@ -7,6 +7,7 @@ import Swiper, { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Skeleton from "../../components/Skeleton";
 
 interface Props {
   [key: string]: string;
@@ -34,8 +35,9 @@ export default function ProductDetailPage(data: Props | null) {
     });
     swiper.slideNext();
   });
-  if (!product) return null;
-
+  if (!product || Object.keys(product).length === 0) {
+    return Skeleton();
+  }
   return ` <div class="grid grid-cols-2 gap-8">
             <div class="swiper w-full">
               <div class="swiper-wrapper">

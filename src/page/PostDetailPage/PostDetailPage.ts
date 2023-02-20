@@ -1,4 +1,5 @@
 import { getPost } from "../../api/post.api";
+import Skeleton from "../../components/Skeleton";
 import { useEffect, useState } from "../../lib";
 import { PostType } from "../../types/Post.type";
 
@@ -16,7 +17,9 @@ export default function PostDetailPage(data: Props | null) {
       setPost(res.data);
     }
   }, [id]);
-  if (!post) return null;
+  if (!post) {
+    return Skeleton();
+  }
   return ` <div>
             <h2 class="text-4xl font-extrabold">${post.title}</h2>
             <h4 class="mt-1 font-semibold text-blue-700"> by ${post.author}, ${post.createdAt}</h4>

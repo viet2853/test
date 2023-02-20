@@ -53,9 +53,13 @@ export default function ProductUpdateAdminPage(data: Props | null) {
     if (form) {
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        const listImage = await handleUploadFile(
-          images.files as unknown as File[]
-        );
+        let listImage;
+        if ((images.files?.length as number) > 0) {
+          listImage = await handleUploadFile(images.files as unknown as File[]);
+        } else {
+          listImage = product.images;
+        }
+
         const formData = {
           id,
           name: name.value,
